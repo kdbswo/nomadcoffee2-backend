@@ -1,0 +1,37 @@
+{
+  "name": "nomadcoffee2-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev",
+    "studio": "npx prisma studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdbswo/nomadcoffee2-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdbswo/nomadcoffee2-backend/issues"
+  },
+  "homepage": "https://github.com/kdbswo/nomadcoffee2-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^3.15.2",
+    "@graphql-tools/load-files": "^6.5.3",
+    "@graphql-tools/merge": "^8.2.10",
+    "@graphql-tools/schema": "^8.3.10",
+    "apollo-server": "^2.25.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^15.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.10",
+    "nodemon": "^2.0.16",
+    "prisma": "^3.15.1"
+  }
+}
