@@ -2,6 +2,6 @@ import { gql } from "apollo-server";
 
 export default gql`
   type Query {
-    query: String
+    seeProfile(username: String!): User
   }
 `;
