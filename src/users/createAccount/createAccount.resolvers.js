@@ -40,7 +40,7 @@ export default {
       } catch (e) {
         return {
           ok: false,
-          error: "Cant not create account",
+          error: e.message,
         };
       }
     },
