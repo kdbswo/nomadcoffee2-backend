@@ -50,7 +50,7 @@ const resolverFn = async (
   } else {
     return {
       ok: false,
-      error: "Could not update profile.",
+      error: "Cant update profile.",
     };
   }
 };
