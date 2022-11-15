@@ -45,18 +45,20 @@ export default {
       return Boolean(exists);
     },
 
-    following: async ({ id }, { page }) =>
+    following: async ({ id }, { lastId }) =>
       await client.user.findMany({
         where: { followers: { some: { id } } },
         take: 5,
-        skip: (page - 1) * 5,
+        skip: lastId ? 1 : 0,
+        ...(lastId && { cursor: { id: lastId } }),
       }),
 
-    followers: async ({ id }, { page }) =>
+    followers: async ({ id }, { lastId }) =>
       await client.user.findMany({
         where: { following: { some: { id } } },
         take: 5,
-        skip: (page - 1) * 5,
+        skip: lastId ? 1 : 0,
+        ...(lastId && { cursor: { id: lastId } }),
       }),
   },
 };
