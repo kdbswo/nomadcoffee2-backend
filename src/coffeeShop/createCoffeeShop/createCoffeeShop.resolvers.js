@@ -1,5 +1,5 @@
 import { createWriteStream } from "fs";
-import client from "../../../client";
+import client from "../../client";
 import { protectedResolver } from "../../users/users.utils";
 import { processCategories } from "../coffeeShop.utils";
 
