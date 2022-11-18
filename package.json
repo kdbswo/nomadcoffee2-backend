@@ -46,5 +46,9 @@
   "resolutions": {
     "fs-capacitor": "^6.2.0",
     "graphql-upload": "^11.0.0"
+  },
+  "engines": {
+    "node": "v14.18.3",
+    "npm": "6.14.15"
   }
 }
