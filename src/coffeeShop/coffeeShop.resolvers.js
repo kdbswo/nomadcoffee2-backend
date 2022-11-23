@@ -8,6 +8,14 @@ export default {
       }
       return userId === loggedInUser.id;
     },
+    photos: ({ id }) =>
+      client.coffeeShopPhoto.findMany({
+        where: { coffeeShopId: id },
+      }),
+    categories: ({ id }) =>
+      client.category.findMany({
+        where: { shops: { some: { id } } },
+      }),
   },
   Category: {
     shops: ({ id }, { lastId }) =>
