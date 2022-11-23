@@ -1,6 +1,14 @@
 import client from "../client";
 
 export default {
+  CoffeeShop: {
+    isMine: ({ userId }, _, { loggedInUser }) => {
+      if (!loggedInUser) {
+        return false;
+      }
+      return userId === loggedInUser.id;
+    },
+  },
   Category: {
     shops: ({ id }, { lastId }) =>
       client.category

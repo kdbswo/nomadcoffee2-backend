@@ -10,6 +10,7 @@ export default gql`
     photos: [CoffeeShopPhoto]
     createdAt: String!
     updatedAt: String!
+    isMine: Boolean!
   }
   type Category {
     id: Int!
